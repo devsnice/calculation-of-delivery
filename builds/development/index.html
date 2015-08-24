@@ -3,14 +3,68 @@
 <head>
 	<meta charset="UTF-8">
 	<title>Calculation of delivery</title>
+	
+	<!-- require style -->
+	<link rel="stylesheet" href="libs/bootstrap/css/bootstrap.min.css">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
 </head>
 <body>
-
-	<main class="main" role="main">
+		<main class="main" role="main">
+			<section class="delivery">
+				<form class="delivery__form">
+					<div class="form-group">
+						<label for="exampleInputEmail1">Откуда</label>
+						<select class="form-control form-select-city form-select-from" id="js-from">
+							
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Куда</label>
+						<select class="form-control form-select-city form-select-to" id="js-to">
+							
+						</select>
+					</div>
+					<div class="form-group">
+						<label for="exampleInputPassword1">Вес(кг)</label>
+						<select class="form-control form-select-weight" id="js-weight">
+							
+						</select>
+					</div>
 		
-	</main>
+					<div class="btn btn-success" id="js-get">Рассчитать</div>
+				</form>
+				
+				<div class="delivery__result">
+					<h3>
+						Результат
+					</h3>
+					
+					<table class="table table-hover">
+ 						<tr>
+							 <td>Время доставки(дней)</td>
+							 <td id="js-result-time"></td>
+						 </tr>
+						 <tr>
+							 <td>Стоимость(рублей)</td>
+							 <td id="js-result-cost"></td>
+						 </tr>
+					</table>
+					
+					<div class="delivery__update">
+						<a href="index.html"><i class="fa fa-repeat"></i></a>
+					</div>
+				</div>
+				
+				<!-- Элемент для вывода ошибок -->
+				<div class="delivery__error">
+					<a href="index.html"><i class="fa fa-repeat"></i></a>
+				</div>
+			</section>
 	
-	<script type="/libs/jquery/jquery.js"></script>
-	<script src="/js/code.js"></script>
+		</main>
+
+	<script src="libs/jquery/jquery.js"></script>
+	<script src="js/app.js"></script>
 </body>
 </html>

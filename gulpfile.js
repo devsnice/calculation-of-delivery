@@ -36,6 +36,8 @@ gulp.task('watch', function() {
 gulp.task('libs', function() {
   gulp.src(bc+'jquery/dist/jquery.js')
       .pipe(gulp.dest('./builds/dist/libs/jquery/'));
+  gulp.src(bc+'bootstrap/dist/**/*.*')
+      .pipe(gulp.dest('./builds/dist/libs/bootstrap/'));
 });
 
 gulp.task('default', [
